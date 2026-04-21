@@ -1,0 +1,12 @@
+{
+  "name": "mirror-paiula",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "vercel dev"
+  },
+  "devDependencies": {
+    "vercel": "^48.8.3"
+  }
+}
