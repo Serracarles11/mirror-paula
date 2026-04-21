@@ -12,6 +12,8 @@
 
 html,
 body {
+  display: flex;
+  justify-content: center;
   margin: 0;
   min-height: 100%;
   color: var(--text);
@@ -35,71 +37,11 @@ button {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: min(100vw, 430px);
-  min-height: 100vh;
+  width: min(100vw, 390px);
+  min-height: 100dvh;
   margin: 0 auto;
   overflow-x: hidden;
   background: #fff;
-}
-
-.status-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 58px;
-  padding: 16px 45px 4px;
-  font-size: 21px;
-  font-weight: 800;
-  letter-spacing: .2px;
-}
-
-.status-icons {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.signal {
-  display: inline-flex;
-  align-items: flex-end;
-  gap: 3px;
-  height: 16px;
-}
-
-.signal i {
-  display: block;
-  width: 4px;
-  border-radius: 3px;
-  background: #050505;
-}
-
-.signal i:nth-child(1) { height: 7px; }
-.signal i:nth-child(2) { height: 12px; }
-.signal i:nth-child(3) { height: 16px; }
-
-.battery {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 31px;
-  height: 20px;
-  border-radius: 5px;
-  color: #fff;
-  background: #080808;
-  font-size: 16px;
-  line-height: 1;
-}
-
-.battery::after {
-  content: "";
-  position: absolute;
-  right: -4px;
-  top: 6px;
-  width: 3px;
-  height: 8px;
-  border-radius: 0 2px 2px 0;
-  background: #080808;
 }
 
 .top-bar,
@@ -108,7 +50,7 @@ button {
   align-items: center;
   justify-content: space-between;
   min-height: 76px;
-  padding: 8px 28px;
+  padding: 8px 18px;
   background: #fff;
 }
 
@@ -119,8 +61,8 @@ button {
 .top-title {
   flex: 1;
   text-align: center;
-  font-size: 22px;
-  letter-spacing: 4px;
+  font-size: 16px;
+  letter-spacing: 1px;
 }
 
 .icon-button {
@@ -211,11 +153,11 @@ svg {
 
 .avatar-placeholder p {
   margin-top: 32px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .avatar-placeholder strong {
-  font-size: 25px;
+  font-size: 21px;
 }
 
 .ub-crest {
@@ -335,7 +277,7 @@ svg {
   z-index: 20;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  width: min(100vw, 430px);
+  width: min(100vw, 390px);
   height: 110px;
   transform: translateX(-50%);
   border-top: 1px solid #8d8d8d;
@@ -348,15 +290,17 @@ svg {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 5px;
   color: #202124;
-  font-size: 12px;
+  font-size: 10.5px;
   font-weight: 800;
+  line-height: 1.05;
+  text-align: center;
 }
 
 .bottom-nav svg {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   stroke-width: 2.2;
 }
 
@@ -375,8 +319,8 @@ svg {
 
 .dot {
   position: absolute;
-  top: 25px;
-  right: 27px;
+  top: 26px;
+  right: 25px;
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -629,7 +573,7 @@ svg {
   height: 25px;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 390px) {
   .name-banner {
     padding-inline: 14px;
     font-size: 20px;
@@ -637,14 +581,10 @@ svg {
   }
 }
 
-@media (max-width: 430px) {
-  .status-bar {
-    padding-inline: 34px;
-  }
-
+@media (max-width: 390px) {
   .top-title {
-    font-size: 20px;
-    letter-spacing: 3px;
+    font-size: 16px;
+    letter-spacing: 1px;
   }
 
   .time-card {
